@@ -1,0 +1,42 @@
+{
+  "name": "chronos-landing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "stylelint": "stylelint \"src/styles/**/*.css\"",
+    "stylelint:fix": "stylelint \"src/styles/**/*.css\" --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:e2e": "playwright test",
+    "coverage": "vitest run --coverage",
+    "size": "node scripts/check-bundle-size.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "@vitejs/plugin-basic-ssl": "^1.2.0",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "eslint": "^9.17.0",
+    "postcss": "^8.4.49",
+    "postcss-import": "^16.1.0",
+    "postcss-nesting": "^13.0.1",
+    "prettier": "^3.4.2",
+    "stylelint": "^16.12.0",
+    "stylelint-config-standard": "^36.0.1",
+    "terser": "^5.37.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.70.0",
+    "vite": "^6.0.5",
+    "vitest": "^2.1.8"
+  }
+}

@@ -1,0 +1,20 @@
+:root {
+  --gold: #d4af37;
+  --gold-2: #e9cb80;
+  --gold-3: #a98236;
+  --gold-soft: rgb(212 175 55 / 14%);
+  --bg: #070706;
+  --bg-2: #0d0d0b;
+  --bg-3: #131211;
+  --card: #14130f;
+  --card-2: #1a1813;
+  --text: #f4f1e8;
+  --muted: #a49e90;
+  --line: rgb(212 175 55 / 22%);
+  --line-soft: rgb(255 255 255 / 8%);
+  --shadow: 0 30px 80px rgb(0 0 0 / 55%);
+  --font-serif: "Playfair Display", georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --nav-h: 78px;
+}

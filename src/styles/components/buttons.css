@@ -1,0 +1,104 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 30px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s, background 0.35s;
+  white-space: nowrap;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.35s var(--ease);
+}
+
+.btn-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line-soft);
+  border-radius: 50%;
+  color: var(--gold-2);
+  transition: 0.35s var(--ease);
+}
+
+.btn-icon svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.4s var(--ease);
+}
+
+.btn:hover svg {
+  transform: translateX(4px);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-gold {
+  color: #141006;
+  background: linear-gradient(120deg, var(--gold-3), var(--gold) 45%, var(--gold-2));
+  box-shadow: 0 12px 30px rgb(212 175 55 / 28%);
+}
+
+.btn-gold::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(110deg, transparent, rgb(255 255 255 / 65%), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.7s var(--ease);
+}
+
+.btn-gold:hover {
+  box-shadow: 0 18px 45px rgb(212 175 55 / 45%);
+  transform: translateY(-3px);
+}
+
+.btn-gold:hover::before {
+  left: 130%;
+}
+
+.btn-ghost {
+  color: var(--gold-2);
+  border: 1px solid var(--line);
+  background: rgb(212 175 55 / 4%);
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  background: var(--gold-soft);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgb(0 0 0 / 40%);
+}
+
+.btn-sm {
+  padding: 11px 20px;
+  font-size: 12px;
+}
+
+.btn-lg {
+  padding: 18px 38px;
+  font-size: 15px;
+}
+
+.btn-icon:hover {
+  background: var(--gold);
+  color: #141006;
+  border-color: var(--gold);
+  transform: rotate(90deg);
+}

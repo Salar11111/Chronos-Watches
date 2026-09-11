@@ -1,0 +1,145 @@
+.testimonials {
+  background:
+    radial-gradient(45% 35% at 85% 20%, rgb(212 175 55 / 5%), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg-2));
+}
+
+.slider {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.slider-viewport {
+  overflow: hidden;
+  padding: 6px 2px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.7s var(--ease);
+}
+
+.t-card {
+  position: relative;
+  flex: 0 0 100%;
+  text-align: center;
+  padding: 54px 40px 48px;
+  background: linear-gradient(170deg, var(--card), var(--bg-3));
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 4%);
+}
+
+.t-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.t-card::after {
+  content: "“";
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-serif);
+  font-size: 90px;
+  color: rgb(212 175 55 / 35%);
+  line-height: 1;
+}
+
+.t-stars {
+  display: inline-flex;
+  gap: 4px;
+  color: var(--gold);
+}
+
+.t-stars svg {
+  width: 17px;
+  height: 17px;
+}
+
+.t-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(18px, 2.6vw, 22px);
+  line-height: 1.6;
+  margin: 22px auto 30px;
+  max-width: 620px;
+  color: #efe9da;
+}
+
+.t-name {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold-2);
+}
+
+.t-role {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  margin-top: 34px;
+}
+
+.slider-btn {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--gold-2);
+  transition: 0.4s var(--ease);
+}
+
+.slider-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.slider-btn:hover {
+  background: var(--gold);
+  color: #141006;
+  transform: scale(1.08);
+}
+
+.slider-btn.next svg {
+  transform: rotate(180deg);
+}
+
+.slider-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-3);
+  background: transparent;
+  transition: 0.35s var(--ease);
+}
+
+.slider-dot.active {
+  width: 26px;
+  border-radius: 30px;
+  background: var(--gold);
+}

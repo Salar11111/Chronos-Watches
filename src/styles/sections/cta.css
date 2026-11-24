@@ -5,16 +5,13 @@
 .cta-banner {
   position: relative;
   width: min(1240px, 92%);
-  margin: 60px auto 0;
-  padding: 90px 40px;
+  margin: var(--s-7) auto 0;
+  padding: var(--s-8) var(--s-6);
   text-align: center;
-  border-radius: 18px;
+  border-radius: var(--r-lg);
   overflow: hidden;
-  background:
-    radial-gradient(70% 100% at 50% 0%, rgb(212 175 55 / 14%), transparent 70%),
-    linear-gradient(135deg, #0e1113, #13100c 60%, #0b0b0b);
-  border: 1px solid var(--line-soft);
-  box-shadow: 0 50px 100px rgb(0 0 0 / 60%);
+  background: var(--card);
+  border: 1px solid var(--line);
 }
 
 .cta-banner::before {
@@ -22,21 +19,14 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgb(212 175 55 / 5%) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(212 175 55 / 5%) 1px, transparent 1px);
+    linear-gradient(rgb(212 175 55 / 4%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(212 175 55 / 4%) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(ellipse at center, #000, transparent 78%);
 }
 
 .cta-shine {
-  position: absolute;
-  top: -60%;
-  left: -30%;
-  width: 40%;
-  height: 220%;
-  background: linear-gradient(100deg, transparent, rgb(212 175 55 / 9%), transparent);
-  transform: rotate(20deg);
-  animation: shine-sweep 6s ease-in-out infinite;
+  display: none;
 }
 
 .cta-content {
@@ -45,7 +35,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: var(--s-4);
 }
 
 .cta-title {
@@ -55,20 +45,25 @@
   color: #fbf8f0;
 }
 
+.cta-title .grad-text {
+  background: none;
+  -webkit-text-fill-color: var(--gold-2);
+  color: var(--gold-2);
+}
+
 .cta-sub {
   max-width: 560px;
   color: var(--muted);
-  font-weight: 300;
-  font-size: 16.5px;
+  font-size: 16px;
+  line-height: 1.55;
 }
 
 .cta-note {
-  font-size: 12px;
-  letter-spacing: 3px;
+  font-size: 13px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold);
   border: 1px solid var(--line);
-  padding: 8px 18px;
-  border-radius: 30px;
-  background: rgb(212 175 55 / 7%);
+  padding: var(--s-2) var(--s-4);
+  border-radius: var(--r-btn);
 }

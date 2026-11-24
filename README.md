@@ -34,6 +34,12 @@ It is also built to travel: English, French and German copy through a small cust
 
 ---
 
+## 📸 Screenshots
+
+![Chronos Watches landing page](docs/screenshots/home.jpg)
+
+---
+
 ## 🚀 Quick start
 
 ```bash

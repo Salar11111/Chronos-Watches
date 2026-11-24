@@ -7,10 +7,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background:
-    radial-gradient(45% 45% at 12% 30%, rgb(212 175 55 / 10%), transparent 65%),
-    radial-gradient(40% 40% at 90% 80%, rgb(212 175 55 / 6%), transparent 60%);
-  opacity: 0.8;
+  background: radial-gradient(45% 45% at 12% 30%, rgb(212 175 55 / 5%), transparent 65%);
 }
 
 .about-inner {
@@ -19,14 +16,14 @@
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
   align-items: center;
-  gap: 70px;
+  gap: var(--s-7);
 }
 
 .about-visual {
   position: relative;
   display: grid;
   place-items: center;
-  padding: 30px 0 60px;
+  padding: var(--s-5) 0 var(--s-8);
 }
 
 .emblem {
@@ -36,14 +33,12 @@
 }
 
 .emblem-motion {
-  will-change: transform;
-  transition: transform 0.1s linear;
+  transform: none !important;
 }
 
 .emblem-watch {
-  width: 380px;
-  filter: drop-shadow(0 50px 70px rgb(0 0 0 / 60%));
-  animation: float-y 7s ease-in-out infinite;
+  width: 400px;
+  filter: drop-shadow(0 30px 50px rgb(0 0 0 / 55%));
 }
 
 .emblem::before {
@@ -52,8 +47,7 @@
   width: 430px;
   height: 430px;
   border-radius: 50%;
-  border: 1px dashed rgb(212 175 55 / 30%);
-  animation: spin 60s linear infinite;
+  border: 1px solid rgb(212 175 55 / 16%);
 }
 
 .emblem::after {
@@ -62,13 +56,12 @@
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  border: 1px solid rgb(212 175 55 / 15%);
-  box-shadow: 0 0 80px rgb(0 0 0 / 60%), inset 0 0 60px rgb(0 0 0 / 50%);
+  border: 1px solid var(--line);
 }
 
 .emblem-year {
   position: absolute;
-  right: -30px;
+  right: -16px;
   bottom: 8px;
   z-index: 3;
   width: 92px;
@@ -79,73 +72,71 @@
   font-family: var(--font-serif);
   font-size: 15px;
   line-height: 1.25;
-  letter-spacing: 2px;
-  color: #141006;
+  letter-spacing: 0.1em;
+  color: var(--ink);
   border-radius: 50%;
-  background: linear-gradient(120deg, var(--gold-2), var(--gold));
-  box-shadow: 0 14px 40px rgb(212 175 55 / 40%);
-  animation: float-y 5s ease-in-out infinite;
+  background: var(--gold);
 }
 
 .float-chip {
   position: absolute;
   z-index: 4;
-  padding: 14px 22px;
-  border-radius: 8px;
-  background: rgb(17 16 13 / 90%);
+  padding: var(--s-3) var(--s-4);
+  border-radius: var(--r-sm);
+  background: var(--bg-2);
   border: 1px solid var(--line);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 20px 50px rgb(0 0 0 / 55%);
   font-family: var(--font-serif);
   font-size: 24px;
   color: var(--gold-2);
   display: flex;
   flex-direction: column;
-  animation: float-y 6s ease-in-out infinite;
 }
 
 .float-chip span {
   font-family: var(--font-sans);
-  font-size: 11px;
-  letter-spacing: 2px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
 .chip-gold {
   top: 4%;
-  left: -6%;
+  left: 0;
 }
 
 .chip-line {
   bottom: 2%;
-  right: -2%;
-  animation-delay: -3s;
+  right: 0;
 }
 
 .about-copy .section-title {
-  margin-top: 16px;
+  margin-top: var(--s-4);
 }
 
 .about-text {
-  margin-top: 22px;
+  margin-top: var(--s-5);
   color: var(--muted);
-  font-weight: 300;
-  font-size: 16.5px;
+  font-size: 16px;
+  line-height: 1.55;
   max-width: 560px;
+}
+
+.about-text em {
+  color: var(--text);
 }
 
 .about-list {
   list-style: none;
-  margin-top: 30px;
+  margin-top: var(--s-6);
   display: grid;
-  gap: 14px;
+  gap: var(--s-3);
 }
 
 .about-list li {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: var(--s-3);
   color: var(--text);
   font-size: 15px;
 }
@@ -165,9 +156,8 @@
   inset: 6px;
   border-radius: 50%;
   background: var(--gold);
-  animation: li-glow 2.4s ease-in-out infinite;
 }
 
 .about-cta {
-  margin-top: 36px;
+  margin-top: var(--s-6);
 }

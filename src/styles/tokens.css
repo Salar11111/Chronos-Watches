@@ -1,20 +1,43 @@
 :root {
+  /* Shared spacing scale */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+
+  /* One radius recipe */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-btn: 8px;
+
+  /* Shared motion */
+  --dur: 160ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+
+  /* Editorial luxury palette: near-black ground, restrained gold */
   --gold: #d4af37;
+  --accent: var(--gold);
   --gold-2: #e9cb80;
   --gold-3: #a98236;
-  --gold-soft: rgb(212 175 55 / 14%);
+  --gold-soft: rgb(212 175 55 / 10%);
   --bg: #070706;
   --bg-2: #0d0d0b;
   --bg-3: #131211;
   --card: #14130f;
   --card-2: #1a1813;
+  --ink: #16181d;
   --text: #f4f1e8;
   --muted: #a49e90;
-  --line: rgb(212 175 55 / 22%);
+  --line: rgb(255 255 255 / 14%);
   --line-soft: rgb(255 255 255 / 8%);
-  --shadow: 0 30px 80px rgb(0 0 0 / 55%);
+  --focus: 2px solid var(--accent);
   --font-serif: "Playfair Display", georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --nav-h: 78px;
 }

@@ -6,29 +6,36 @@
 .skip-link {
   position: absolute;
   top: -60px;
-  left: 16px;
+  left: var(--s-4);
   z-index: 10000;
   background: var(--gold);
-  color: #141006;
-  padding: 10px 20px;
+  color: var(--ink);
+  padding: var(--s-3) var(--s-5);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   text-decoration: none;
-  border-radius: 2px;
-  transition: top 0.2s var(--ease);
+  border-radius: var(--r-btn);
+  transition: top var(--dur) var(--ease);
 }
 
 .skip-link:focus {
-  top: 12px;
+  top: var(--s-3);
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
+  outline: var(--focus);
+  outline-offset: 2px;
 }
 
 :focus:not(:focus-visible) {
   outline: none;
+}
+
+a:not(.btn, .brand, .nav-link):hover {
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 
 .svg-defs {
